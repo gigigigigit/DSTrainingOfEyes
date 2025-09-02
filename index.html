@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DS 眼力トレーニング（簡易版）</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>眼力トレーニング（簡易版）</h1>
+      <div class="status">
+        <div>スコア: <span id="score">0</span></div>
+        <div>レベル: <span id="level">1</span></div>
+      </div>
+    </header>
+
+    <main id="app">
+      <section id="menu" class="screen">
+        <h2>ゲームを選択</h2>
+        <div class="menu-row">
+          <button class="menu-btn" data-game="oddOneOut">識別: まぎれもの探し</button>
+          <button class="menu-btn" data-game="tracking">追跡: シャッフル追跡</button>
+        </div>
+        <h3>難易度</h3>
+        <div class="menu-row">
+          <button class="level-btn" data-level="1">1</button>
+          <button class="level-btn" data-level="2">2</button>
+          <button class="level-btn" data-level="3">3</button>
+          <button class="level-btn" data-level="4">4</button>
+          <button class="level-btn" data-level="5">5</button>
+        </div>
+        <p class="hint">ブラウザで開くだけで遊べます（音なし・データ保存なし）。</p>
+      </section>
+
+      <section id="game" class="screen hidden">
+        <div id="game-toolbar">
+          <button id="backBtn">メニューに戻る</button>
+          <button id="retryBtn">やり直し</button>
+        </div>
+        <div id="game-root"></div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <small>Copyright © 2025 – Training demo. Nintendo公式とは無関係のファンメイド。</small>
+    </footer>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+  </html>
+
